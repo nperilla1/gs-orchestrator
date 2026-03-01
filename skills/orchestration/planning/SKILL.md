@@ -25,7 +25,11 @@ You are creating an implementation plan. Every step must be concrete enough that
 ## Scope: [What's in / what's out]
 ## Estimated Steps: [N]
 ## Dependencies: [Other plans, external services, data]
+## Data Context: [From brainstorming Step 1.5 — write schema, read schemas, key tables]
+## Constitution Compliance: [Which articles apply, confirmed compliant or deviation documented]
 ```
+
+If this plan touches the database and no Data Context section exists from brainstorming, STOP. Run the database discovery from the brainstorming skill (Step 1.5) before writing the plan. Plans that create schemas or tables without understanding the existing data landscape will produce designs that conflict with the ecosystem.
 
 ### Steps
 
