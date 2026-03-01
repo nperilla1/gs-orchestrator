@@ -33,8 +33,13 @@ if echo "$MSG_LOWER" | grep -qE "fix|bug|error|failing|broken|crash|exception|tr
     SKILLS="$SKILLS debugging"
 fi
 
-if echo "$MSG_LOWER" | grep -qE "test|coverage|spec|tdd|red.green"; then
+if echo "$MSG_LOWER" | grep -qE "tdd|red.green|write.*test.*first"; then
     SKILLS="$SKILLS tdd"
+fi
+
+# QA patterns — full sweep, intent discovery, test generation
+if echo "$MSG_LOWER" | grep -qE "qa|sweep|test (this|the|everything|all)|run.*tests|coverage|generate tests|write tests|intent.*(discover|map)|mutation test|visual regress|heal.*test|fix.*test"; then
+    SKILLS="$SKILLS full-sweep intent-discovery"
 fi
 
 if echo "$MSG_LOWER" | grep -qE "review|pr |pull request|code review|check my"; then
