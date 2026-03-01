@@ -1,0 +1,88 @@
+# Technology Stack Decisions
+
+<!-- REPLACE: Project name and date -->
+<!-- This document records technology choices and their rationale. Update when stack changes. -->
+
+## Overview
+
+<!-- REPLACE: 2-3 sentences summarizing the overall technology strategy and philosophy. -->
+
+## Languages
+
+| Language | Version | Purpose | Rationale |
+|----------|---------|---------|-----------|
+| <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> |
+
+## Frameworks
+
+| Framework | Version | Purpose | Rationale |
+|-----------|---------|---------|-----------|
+| <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> |
+
+## Databases
+
+| Database | Version | Purpose | Rationale |
+|----------|---------|---------|-----------|
+| <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> |
+
+### ORM / Query Layer
+
+<!-- REPLACE: Which ORM or query builder is used and why. Include connection patterns. -->
+
+### Migration Strategy
+
+<!-- REPLACE: How database migrations are managed (Alembic, Prisma, raw SQL, etc.) -->
+
+## Infrastructure
+
+| Component | Technology | Purpose | Rationale |
+|-----------|-----------|---------|-----------|
+| Hosting | <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> |
+| Reverse Proxy | <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> |
+| Container Runtime | <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> |
+| Object Storage | <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> |
+| CI/CD | <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> |
+
+## External Services
+
+| Service | Purpose | Cost Model | Fallback |
+|---------|---------|-----------|----------|
+| <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> |
+
+## Development Tools
+
+| Tool | Purpose | Required? |
+|------|---------|-----------|
+| <!-- REPLACE: linter --> | Code quality | Yes |
+| <!-- REPLACE: formatter --> | Code formatting | Yes |
+| <!-- REPLACE: type checker --> | Type safety | Yes |
+| <!-- REPLACE: test runner --> | Testing | Yes |
+
+## Decision Log
+
+<!-- REPLACE: Record technology decisions chronologically. Include what was considered and why the choice was made. -->
+
+### <!-- REPLACE: Date --> -- <!-- REPLACE: Decision Title -->
+
+**Context**: <!-- REPLACE: What prompted this decision -->
+**Options considered**:
+1. <!-- REPLACE: Option A --> -- <!-- REPLACE: pros/cons -->
+2. <!-- REPLACE: Option B --> -- <!-- REPLACE: pros/cons -->
+
+**Decision**: <!-- REPLACE: What was chosen and why -->
+
+## Principles
+
+<!-- REPLACE: List the guiding principles for technology decisions -->
+
+1. **<!-- REPLACE: Principle -->** -- <!-- REPLACE: explanation -->
+2. **<!-- REPLACE: Principle -->** -- <!-- REPLACE: explanation -->
+3. **<!-- REPLACE: Principle -->** -- <!-- REPLACE: explanation -->
+
+## Rejected Technologies
+
+<!-- REPLACE: Technologies that were explicitly considered and rejected. Prevents re-litigating past decisions. -->
+
+| Technology | Reason for Rejection | Date |
+|-----------|---------------------|------|
+| <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> |

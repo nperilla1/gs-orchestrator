@@ -1,0 +1,66 @@
+---
+name: <!-- REPLACE: skill-name (lowercase, hyphenated) -->
+description: "<!-- REPLACE: 1-2 sentences describing the skill's purpose and when it triggers. Be specific about trigger conditions so the skill-router can match it. -->"
+version: "1.0"
+# Uncomment if restricting tools:
+# allowed-tools: Read, Write, Edit, Bash, Grep, Glob
+---
+
+# <!-- REPLACE: Skill Title -->
+
+<!-- REPLACE: 1-2 sentences explaining what this skill does and the mindset to adopt while using it. Write in second person ("You are..."). -->
+
+## When to Use
+
+<!-- REPLACE: List the specific situations where this skill should be activated. Be concrete. -->
+
+- When the user says "<!-- REPLACE: trigger phrase 1 -->"
+- When the user says "<!-- REPLACE: trigger phrase 2 -->"
+- After <!-- REPLACE: preceding skill or event --> completes
+- Before any work that involves <!-- REPLACE: specific context -->
+
+## Process
+
+<!-- REPLACE: Define the step-by-step process. Number major steps, use sub-bullets for details. -->
+
+### Step 1: <!-- REPLACE: Step Name -->
+
+<!-- REPLACE: What to do in this step. Include commands, checks, or thought process. -->
+
+```bash
+# <!-- REPLACE: Example command if applicable -->
+```
+
+### Step 2: <!-- REPLACE: Step Name -->
+
+<!-- REPLACE: What to do in this step. -->
+
+### Step 3: <!-- REPLACE: Step Name -->
+
+<!-- REPLACE: What to do in this step. -->
+
+## Output Format
+
+<!-- REPLACE: Define the expected output structure. Use a template or example. -->
+
+```
+<!-- REPLACE: Output template -->
+```
+
+## Examples
+
+<!-- REPLACE: Provide 1-2 concrete examples showing input and expected behavior. -->
+
+### Example 1: <!-- REPLACE: Example title -->
+
+**Input**: <!-- REPLACE: What the user provides -->
+**Process**: <!-- REPLACE: What the skill does -->
+**Output**: <!-- REPLACE: What the skill produces -->
+
+## Anti-Patterns
+
+<!-- REPLACE: List common mistakes to avoid when using this skill. -->
+
+- Do NOT <!-- REPLACE: anti-pattern 1 -->
+- Do NOT <!-- REPLACE: anti-pattern 2 -->
+- Do NOT <!-- REPLACE: anti-pattern 3 -->

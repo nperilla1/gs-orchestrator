@@ -1,0 +1,161 @@
+# Architecture Steering Document
+
+<!-- REPLACE: Project name and date -->
+<!-- This document defines HOW the system is built. See product.md for WHAT and WHY. -->
+
+## System Overview
+
+<!-- REPLACE: 1 paragraph high-level description. What are the major components and how do they interact? -->
+
+### System Diagram
+
+<!-- REPLACE: ASCII diagram or description of the system topology -->
+
+```
+<!-- REPLACE: System diagram -->
+[Client] --> [API Gateway] --> [Services] --> [Database]
+                                   |
+                                   +--> [External APIs]
+```
+
+## System Boundaries
+
+<!-- REPLACE: Define what is inside this system vs external dependencies -->
+
+### Internal Components
+
+| Component | Responsibility | Technology |
+|-----------|---------------|-----------|
+| <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> |
+
+### External Dependencies
+
+| Dependency | Interface | SLA/Reliability |
+|-----------|-----------|-----------------|
+| <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> |
+
+## Data Flow
+
+<!-- REPLACE: Describe the primary data flows through the system -->
+
+### <!-- REPLACE: Flow Name --> (e.g., "User Request Flow")
+
+```
+1. Client sends request to API
+2. API validates input with Pydantic
+3. Service layer applies business logic
+4. Repository layer queries database
+5. Response flows back up the stack
+```
+
+### <!-- REPLACE: Flow Name --> (e.g., "Background Processing Flow")
+
+```
+1. Event triggers workflow
+2. Worker picks up the task
+3. ...
+```
+
+## Service Communication
+
+<!-- REPLACE: How do services talk to each other? -->
+
+| Pattern | Used For | Technology |
+|---------|----------|-----------|
+| Sync HTTP | <!-- REPLACE --> | <!-- REPLACE --> |
+| Async Queue | <!-- REPLACE --> | <!-- REPLACE --> |
+| Events | <!-- REPLACE --> | <!-- REPLACE --> |
+| Direct DB | <!-- REPLACE --> | <!-- REPLACE --> |
+
+### Error Handling
+
+<!-- REPLACE: How do errors propagate across service boundaries? -->
+
+### Retry Strategy
+
+<!-- REPLACE: How are transient failures handled? -->
+
+## Data Architecture
+
+### Schema Design
+
+<!-- REPLACE: List schemas and their purpose -->
+
+| Schema | Purpose | Ownership |
+|--------|---------|-----------|
+| <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> |
+
+### Data Ownership
+
+<!-- REPLACE: Which service owns which data? Can other services read it directly or must they go through the owning service's API? -->
+
+### Migration Strategy
+
+<!-- REPLACE: How are schema changes deployed? Zero-downtime? Rolling? -->
+
+## Deployment Topology
+
+<!-- REPLACE: Where does each component run? -->
+
+```
+<!-- REPLACE: Deployment diagram -->
+[Lightsail Instance]
+  ├── [Docker: API]
+  ├── [Docker: Workers]
+  ├── [Docker: Database]
+  └── [Docker: Reverse Proxy]
+```
+
+### Scaling Strategy
+
+<!-- REPLACE: How does each component scale? Vertical? Horizontal? -->
+
+### Deployment Process
+
+<!-- REPLACE: How is new code deployed? CI/CD pipeline? Manual? -->
+
+## Security Architecture
+
+### Authentication Flow
+
+<!-- REPLACE: How are users authenticated? JWT? Session? OAuth? -->
+
+### Authorization Model
+
+<!-- REPLACE: How are permissions checked? RBAC? ABAC? -->
+
+### Data Protection
+
+<!-- REPLACE: How is sensitive data protected at rest and in transit? -->
+
+## Observability
+
+### Logging
+
+<!-- REPLACE: Logging strategy, format, and retention -->
+
+### Metrics
+
+<!-- REPLACE: Key metrics to monitor -->
+
+### Alerting
+
+<!-- REPLACE: What triggers alerts and how are they routed -->
+
+## Architecture Decision Records (ADRs)
+
+<!-- REPLACE: Document significant architecture decisions -->
+
+### ADR-001: <!-- REPLACE: Decision Title -->
+
+**Status**: <!-- REPLACE: Proposed | Accepted | Deprecated | Superseded -->
+**Context**: <!-- REPLACE: What is the issue? -->
+**Decision**: <!-- REPLACE: What was decided? -->
+**Consequences**: <!-- REPLACE: What are the positive and negative outcomes? -->
+
+## Known Limitations
+
+<!-- REPLACE: Document known architectural limitations and technical debt -->
+
+1. **<!-- REPLACE: Limitation -->** -- <!-- REPLACE: impact and planned resolution -->
+2. **<!-- REPLACE: Limitation -->** -- <!-- REPLACE: impact and planned resolution -->

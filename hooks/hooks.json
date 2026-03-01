@@ -1,0 +1,86 @@
+{
+  "SessionStart": [
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "bash ${CLAUDE_PLUGIN_ROOT}/hooks/handlers/bootstrap.sh",
+          "timeout": 10
+        }
+      ]
+    }
+  ],
+  "UserPromptSubmit": [
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "bash ${CLAUDE_PLUGIN_ROOT}/hooks/handlers/skill-router.sh",
+          "timeout": 5
+        }
+      ]
+    }
+  ],
+  "PreToolUse": [
+    {
+      "matcher": "Edit|Write",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "bash ${CLAUDE_PLUGIN_ROOT}/hooks/handlers/protect-files.sh",
+          "timeout": 5
+        }
+      ]
+    },
+    {
+      "matcher": "Bash",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "bash ${CLAUDE_PLUGIN_ROOT}/hooks/handlers/protect-files.sh",
+          "timeout": 5
+        }
+      ]
+    }
+  ],
+  "PostToolUse": [
+    {
+      "matcher": "Edit|Write",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "bash ${CLAUDE_PLUGIN_ROOT}/hooks/handlers/post-write-validate.sh",
+          "timeout": 10
+        },
+        {
+          "type": "command",
+          "command": "bash ${CLAUDE_PLUGIN_ROOT}/hooks/handlers/auto-format.sh",
+          "timeout": 10,
+          "async": true
+        }
+      ]
+    }
+  ],
+  "Stop": [
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "bash ${CLAUDE_PLUGIN_ROOT}/hooks/handlers/completion-gate.sh",
+          "timeout": 30
+        }
+      ]
+    }
+  ],
+  "PreCompact": [
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "bash ${CLAUDE_PLUGIN_ROOT}/hooks/handlers/compact-context.sh",
+          "timeout": 10
+        }
+      ]
+    }
+  ]
+}

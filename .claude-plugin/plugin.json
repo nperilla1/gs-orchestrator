@@ -1,0 +1,22 @@
+{
+  "name": "gs-orchestrator",
+  "version": "1.0.0",
+  "description": "GrantSmiths unified orchestration plugin — agents, skills, hooks, MCP configs, and autonomous workflows for the grant writing platform rebuild.",
+  "author": {
+    "name": "Nicolas Perilla",
+    "url": "https://grantsmiths.com"
+  },
+  "repository": "https://github.com/nperilla1/gs-orchestrator",
+  "license": "MIT",
+  "keywords": [
+    "grantsmiths",
+    "grant-writing",
+    "orchestration",
+    "agents",
+    "skills",
+    "hooks",
+    "autonomous"
+  ],
+  "hooks": "./hooks/hooks.json",
+  "mcpServers": "./.mcp.json"
+}

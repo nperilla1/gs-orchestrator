@@ -1,0 +1,86 @@
+# Product Steering Document
+
+<!-- REPLACE: Project name and date -->
+<!-- This document defines WHAT we are building and WHY. It does not define HOW (see architecture.md for that). -->
+
+## Vision
+
+<!-- REPLACE: 1-2 sentences describing the long-term aspiration for this product. What does the world look like if this succeeds? -->
+
+## Problem Statement
+
+<!-- REPLACE: What problem does this product solve? Who has this problem? How are they solving it today? Why is the current solution inadequate? -->
+
+## Target Users
+
+<!-- REPLACE: Define the primary user personas. Be specific about their role, goals, and pain points. -->
+
+| Persona | Role | Goals | Pain Points |
+|---------|------|-------|-------------|
+| <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> |
+| <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> |
+
+## Core Features
+
+<!-- REPLACE: List the features that define the MVP. Prioritize ruthlessly. -->
+
+### Must Have (P0)
+
+<!-- REPLACE: Features that are required for the product to be useful at all -->
+
+1. **<!-- REPLACE: Feature name -->** -- <!-- REPLACE: one sentence description -->
+2. **<!-- REPLACE: Feature name -->** -- <!-- REPLACE: one sentence description -->
+
+### Should Have (P1)
+
+<!-- REPLACE: Features that significantly improve the product but are not blocking launch -->
+
+1. **<!-- REPLACE: Feature name -->** -- <!-- REPLACE: one sentence description -->
+
+### Nice to Have (P2)
+
+<!-- REPLACE: Features that can wait for v2 -->
+
+1. **<!-- REPLACE: Feature name -->** -- <!-- REPLACE: one sentence description -->
+
+## Success Metrics
+
+<!-- REPLACE: How do we know if the product is working? Define measurable outcomes. -->
+
+| Metric | Target | Measurement Method |
+|--------|--------|--------------------|
+| <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> |
+| <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> |
+
+## Non-Goals
+
+<!-- REPLACE: Explicitly state what this product will NOT do. This prevents scope creep. -->
+
+- This product will NOT <!-- REPLACE -->
+- This product will NOT <!-- REPLACE -->
+- This product will NOT <!-- REPLACE -->
+
+## Key Decisions
+
+<!-- REPLACE: Document important product decisions and their rationale. -->
+
+| Decision | Chosen Option | Alternatives Considered | Rationale |
+|----------|---------------|------------------------|-----------|
+| <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> | <!-- REPLACE --> |
+
+## Timeline
+
+<!-- REPLACE: High-level milestones. Not a detailed project plan. -->
+
+| Milestone | Target Date | Description |
+|-----------|-------------|-------------|
+| MVP | <!-- REPLACE --> | <!-- REPLACE --> |
+| Beta | <!-- REPLACE --> | <!-- REPLACE --> |
+| GA | <!-- REPLACE --> | <!-- REPLACE --> |
+
+## Open Questions
+
+<!-- REPLACE: List unresolved decisions that need input. Remove as they are resolved. -->
+
+- [ ] <!-- REPLACE: Question 1 -->
+- [ ] <!-- REPLACE: Question 2 -->

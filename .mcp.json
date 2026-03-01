@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp"]
+    },
+    "supabase": {
+      "command": "npx",
+      "args": ["-y", "@supabase/mcp-server-supabase@latest", "--access-token", "${SUPABASE_ACCESS_TOKEN}"]
+    },
+    "airtable": {
+      "command": "npx",
+      "args": ["-y", "airtable-mcp-server"],
+      "env": {
+        "AIRTABLE_API_KEY": "${AIRTABLE_API_KEY}"
+      }
+    },
+    "gs-unified": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres", "${GS_DB_URL}"]
+    }
+  }
+}

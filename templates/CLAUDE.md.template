@@ -1,0 +1,139 @@
+# CLAUDE.md
+
+<!-- REPLACE: Project name and one-line description -->
+> This file gives Claude Code full context for working on [PROJECT NAME].
+
+---
+
+## Project Overview
+
+<!-- REPLACE: 2-3 sentences explaining what this project does, who it serves, and why it exists -->
+
+## Tech Stack
+
+<!-- REPLACE: List the core technologies and versions -->
+
+| Layer | Technology | Version | Notes |
+|-------|-----------|---------|-------|
+| Language | | | |
+| Framework | | | |
+| Database | | | |
+| ORM | | | |
+| Testing | | | |
+| Linting | | | |
+
+## Key Commands
+
+```bash
+# Install dependencies
+<!-- REPLACE: your install command -->
+
+# Run tests
+<!-- REPLACE: your test command -->
+
+# Run linter
+<!-- REPLACE: your lint command -->
+
+# Run type checker
+<!-- REPLACE: your type check command -->
+
+# Start development server
+<!-- REPLACE: your dev server command -->
+
+# Run database migrations
+<!-- REPLACE: your migration command -->
+```
+
+## Architecture
+
+<!-- REPLACE: Describe the high-level architecture. Include directory layout. -->
+
+```
+src/
+├── api/          # <!-- REPLACE: what the api layer does -->
+├── models/       # <!-- REPLACE: what the models layer does -->
+├── services/     # <!-- REPLACE: what the services layer does -->
+├── repositories/ # <!-- REPLACE: what the data access layer does -->
+└── workers/      # <!-- REPLACE: what the background workers do -->
+```
+
+### Data Flow
+
+<!-- REPLACE: Describe how a request flows through the system -->
+```
+Client -> API Route -> Service -> Repository -> Database
+```
+
+### Key Patterns
+
+<!-- REPLACE: List the important architectural patterns used -->
+- Repository pattern for data access
+- Service layer for business logic
+- Pydantic models for validation
+
+## Testing
+
+<!-- REPLACE: Describe the testing strategy -->
+
+```bash
+# Run full suite
+pytest tests/ -v
+
+# Run specific test
+pytest tests/test_feature.py::test_specific -v
+
+# Run with coverage
+pytest tests/ --cov=src --cov-report=term-missing
+```
+
+### Test Categories
+
+<!-- REPLACE: List test categories and what they cover -->
+- Unit tests: `tests/unit/`
+- Integration tests: `tests/integration/`
+- E2E tests: `tests/e2e/`
+
+## Gotchas
+
+<!-- REPLACE: Document known pitfalls, unintuitive behavior, and common mistakes -->
+
+1. **<!-- REPLACE: gotcha title -->**
+   <!-- REPLACE: explanation and workaround -->
+
+2. **<!-- REPLACE: gotcha title -->**
+   <!-- REPLACE: explanation and workaround -->
+
+## Environment Variables
+
+<!-- REPLACE: List required and optional env vars -->
+
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `DATABASE_URL` | Yes | PostgreSQL connection string |
+| `API_KEY` | Yes | External API authentication |
+
+## Deployment
+
+<!-- REPLACE: Describe how to deploy -->
+
+```bash
+# Build
+<!-- REPLACE: build command -->
+
+# Deploy
+<!-- REPLACE: deploy command -->
+```
+
+## External Dependencies
+
+<!-- REPLACE: List external services, APIs, and infrastructure this project depends on -->
+
+| Service | Purpose | Health Check |
+|---------|---------|-------------|
+| PostgreSQL | Primary database | `SELECT 1` |
+| Redis | Cache/queue | `PING` |
+
+---
+
+<!-- NOTE: Keep this file under 500 lines. Link to detailed docs rather than duplicating. -->
+<!-- NOTE: Update this file when architecture changes. Stale docs are worse than no docs. -->
