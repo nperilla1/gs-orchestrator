@@ -60,7 +60,7 @@ fi
 
 # Domain patterns
 if echo "$MSG_LOWER" | grep -qE "frontend|ui |component|page|react|next\.?js|tailwind|css"; then
-    SKILLS="$SKILLS aesthetics"
+    SKILLS="$SKILLS aesthetics frontend-design"
 fi
 
 if echo "$MSG_LOWER" | grep -qE "ad |copy|campaign|marketing|headline|tagline|cta|ad copy"; then
