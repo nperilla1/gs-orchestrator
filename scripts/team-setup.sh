@@ -177,14 +177,36 @@ install_plugin() {
         if claude plugin add "${name}@${source}" 2>/dev/null; then
             ok "$name installed"
         else
-            warn "$name failed to install (non-critical, continue)"
+            # Try local install if this is gs-orchestrator and we're in the repo
+            if [ "$name" = "gs-orchestrator" ] && [ -f ".claude-plugin/plugin.json" ]; then
+                if claude plugin add . 2>/dev/null; then
+                    ok "$name installed (from local directory)"
+                else
+                    PLUGINS_FAILED=true
+                    warn "$name — install manually (see below)"
+                fi
+            else
+                PLUGINS_FAILED=true
+                warn "$name — install manually (see below)"
+            fi
         fi
     fi
 }
 
+PLUGINS_FAILED=false
+
 install_plugin "gs-orchestrator" "gs-marketplace"
 install_plugin "superpowers" "claude-plugins-official"
 install_plugin "coderabbit" "claude-plugins-official"
+
+if [ "$PLUGINS_FAILED" = true ]; then
+    echo ""
+    info "Some plugins need manual install. Open Claude Code and run:"
+    echo "    claude plugin add ~/gs-projects/gs-orchestrator"
+    echo "    claude plugin add superpowers@claude-plugins-official"
+    echo "    claude plugin add coderabbit@claude-plugins-official"
+    echo ""
+fi
 
 # ----------------------------------------------------------
 # Step 6: Initialize orchestrator config
