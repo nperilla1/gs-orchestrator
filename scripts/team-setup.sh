@@ -71,6 +71,8 @@ else
     WHOAMI=$(whoami)
     read -p "  Enter your name (for the key label): " KEY_NAME
     KEY_NAME="${KEY_NAME:-$WHOAMI}"
+    # Strip leading "gs-" if they already included it
+    KEY_NAME="${KEY_NAME#gs-}"
 
     ssh-keygen -t ed25519 -f "$GS_KEY" -N "" -C "gs-${KEY_NAME// /-}" >/dev/null 2>&1
     ok "Generated SSH key at $GS_KEY"
